@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+body {
+  background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', 'Noto Sans JP', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+#header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5vw;
+  color: #fff;
+  text-shadow:
+    1px 0 0 black,
+    0 1px 0 black,
+    -1px 0 0 black,
+    0 -1px 0 black;
+  text-align: center;
+  padding: 5rem 0;
+  background-image:url('../background2.jpg');
+  background-repeat:  no-repeat;
+  background-size:  cover;
+}
+#navigator {
+  background: #f0f0f0;
+  box-shadow: 0 2px 5px #aaa;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-around;
+}
+.navigator.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navichild {
+  padding: 1em;
+}
+.navichild a {
+  padding: 0.5rem 0 0.5rem 3rem;
+  margin: 0;
+  color: #111;
+  text-decoration: none;
+  background-repeat : no-repeat;
+  background-position : left;
+  background-size: contain;
+}
+.navichild a:visited {
+  color: #111;
+}
+
+.content {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title img {
+  width: 70px;
+  height: 70px;
+  padding: 0 1rem;
+}
+
+#footer {
+  background: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 3rem 0;
+}
+#footer a {
+  padding: 0 1rem;
+  text-decoration: none;
+}
+#footer a:visited{
+  color: #fff;
+}
+
+/*--------- ↑header,footer,bodyなど、ほかのページを作るときも使いまわせる部分 ----------*/
+.aboutme {
+  display: flex;
+  justify-content: center;
+}
+.aboutme img{
+  padding: 0 1rem;
+}
