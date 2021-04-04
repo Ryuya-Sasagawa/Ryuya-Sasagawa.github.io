@@ -7,10 +7,14 @@ body {
   font-family: 'Lato', 'Noto Sans JP', sans-serif;
 }
 
-h1 {
-  font-size: 2rem;
+h1, h2{
   padding: 1rem 0;
   text-align: center;
+}
+h1 {
+  font-size: 2rem;
+}h2{
+  font-size: 1.3rem;
 }
 
 #header {
@@ -103,4 +107,43 @@ h1 {
 }
 .aboutme div{
   width: 60%;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.subtitle {
+  width: 100%;
+}
+
+.card {
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 15px;
+  background: #fafafa;
+  border: 2px solid #d0d0d0;
+}
+.card img {
+  width: 50px;
+  height: 50px;
+  padding: 0.5rem 0;
+}
+.card .card-content{
+  display: flex;
+  align-items: center;
+}
+.card div p{
+  padding: 0 0.5rem;
+}
+
+.card span{
+  color: #c0a080;
+}
+
+.card .info{
+  text-align: center;
 }
