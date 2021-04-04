@@ -93,7 +93,14 @@ h1 {
 .aboutme {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .aboutme img{
   padding: 0 1rem;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+.aboutme div{
+  width: 60%;
 }
