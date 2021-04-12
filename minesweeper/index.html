@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>マインスイーパー</title>
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+    <div class="outline" id="outline">
+      <div class="visible top" id="top">
+        <h1 class="title">マインスイーパー</h1>
+        <p>難易度設定：
+          <select id="level">
+            <option value=0>簡単(サイズ：10×10、 爆弾：12個)</option>
+            <option value=1>普通(サイズ：15×15、 爆弾：35個)</option>
+            <option value=2>難しい(サイズ：20×20、 爆弾：80個)</option>
+            <option value=3>カスタム</option>
+          </select>
+        </p>
+        <button type="button" class="start"
+          onclick="var a=document.getElementById('level').value;
+            var b = [12, 35, 80];
+            if(a<3){move('top', 'game');init(10+a*5, 10+a*5, b[a]);}
+            else{move('top', 'customize');}">start</button>
+      </div>
+      <div class="hidden customize" id="customize">
+        <button type="button" name="back" onclick="move('customize', 'top')" ><img src='img/back.png' width="20px"></button>
+        <p>カスタム</p>
+        <p>縦：<input type="range" class="range" id="vertical" max=30 min=5 value=15><input type="number" class="cui" id="v_tbox" max=30 min=5 value=15><br>
+          横：<input type="range" class="range" id="horizontal" max=30 min=5 value=15><input type="number" class="cui" id="h_tbox" max=30 min=5 value=15><br>
+          爆弾：<input type="range" class="range" id="bomb" max=216 min=1 value=35><input type="number" class="cui" id="b_tbox" min=1 max=216 value=35></p>
+        <button type="button" class="start"
+          onclick="move('customize', 'game');
+          var v = document.getElementById('vertical').value;
+          var h = document.getElementById('horizontal').value;
+          var b = document.getElementById('bomb').value;
+          init(h, v, b);">start</button>
+      </div>
+      <div class="hidden game" id="game">
+        <div class="option" id="option">
+          <button type="button" name="back" onclick="move('game', 'top')" class="nodec"><img src='img/back.png' width="20px"></button>
+          <p class="nodec" id="timer">time: 00:00</p>
+        </div>
+        <div class="game_main" id="minesweeper" oncontextmenu="return false;">
+        </div>
+      </div>
+      <div class="hidden result" id="result">
+        <p id="result_txt">game clear</p>
+        <p id="result_time">time:00:00</p>
+        <!--<p>ranking:<br>1: hoge 03:00<br>2: fuga 03:00...</p>-->
+        <button type="button" name="back" onclick="move('result', 'top')" ><img src='img/back.png' width="20px"></button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/script.js"></script>
+</html>
